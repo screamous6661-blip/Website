@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Fisik - Dhsyt Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#6589ff;
+  --bg:#f5f5f7;
+  --card:#ffffff;
+  --text:#2c2c2c;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  padding:100px 20px 70px;
+  text-align:center;
+  background:linear-gradient(135deg,#4B6CB7,#000);
+  color:#fff;
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:44px;
+  margin-bottom:12px;
+  text-shadow:0 3px 12px rgba(0,0,0,.4);
+}
+
+header p{
+  max-width:640px;
+  margin:auto;
+  font-size:15px;
+  line-height:1.8;
+  color:rgba(255,255,255,.9);
+}
+
+/* SECTION */
+.section{
+  padding:50px 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+}
+
+.section-title p{
+  color:#777;
+}
+
+/* GRID */
+.paket-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+/* CARD */
+.paket-card{
+  background:var(--card);
+  border-radius:24px;
+  padding:40px 30px;
+  text-align:center;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
+  position:relative;
+  transition:.3s;
+}
+
+.paket-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(0,0,0,.1);
+}
+
+.paket-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  color:var(--primary);
+}
+
+.paket-harga{
+  font-size:20px;
+  font-weight:600;
+  margin:10px 0 20px;
+}
+
+.paket-card ul{
+  list-style:none;
+  padding:0;
+  margin-bottom:25px;
+}
+
+.paket-card li{
+  font-size:14px;
+  color:#555;
+  margin-bottom:8px;
+}
+
+/* BUTTON */
+.btn-order{
+  display:inline-block;
+  padding:12px 34px;
+  border-radius:30px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* BEST */
+.paket-card.best{
+  border:2px solid var(--primary);
+  transform:scale(1.03);
+}
+
+.badge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  background:var(--primary);
+  color:#fff;
+  font-size:12px;
+  padding:6px 14px;
+  border-radius:20px;
+}
+
+/* BACK */
+.back-wrapper{
+  display:flex;
+  justify-content:center;
+  margin:40px 0 10px;
+}
+
+.back-btn{
+  padding:10px 22px;
+  border-radius:30px;
+  border:1.5px solid var(--primary);
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.back-btn:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  header h1{font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Undangan Fisik</h1>
+  <p>Undangan cetak premium dengan berbagai pilihan kertas, finishing mewah, dan desain eksklusif.</p>
+</header>
+
+<section class="section">
+  <div class="section-title">
+    <h2>Paket Undangan Fisik</h2>
+    <p>Pilih paket sesuai kebutuhan acara Anda</p>
+  </div>
+
+  <div class="paket-grid">
+
+    <div class="paket-card">
+      <h3>Paket A</h3>
+      <div class="paket-harga">Rp 1.300 / pcs</div>
+      <ul>
+        <li>Kertas Art Paper 260gsm</li>
+        <li>Cetak 2 sisi</li>
+        <li>Ukuran A5</li>
+        <li>Free desain basic</li>
+        <li><strong>Minimal order 100 pcs</strong></li>
+      </ul>
+      <a href="https://wa.me/6285929951565" class="btn-order">Pesan Paket</a>
+    </div>
+
+    <div class="paket-card best">
+      <span class="badge">Terfavorit</span>
+      <h3>Paket B</h3>
+      <div class="paket-harga">Rp 1.200 / pcs</div>
+      <ul>
+        <li>Kertas Ivory 300gsm</li>
+        <li>Cetak 2 sisi</li>
+        <li>Ukuran A5 / Lipat</li>
+        <li>Free desain custom</li>
+        <li>Free amplop polos</li>
+        <li><strong>Minimal order 500 pcs</strong></li>
+      </ul>
+      <a href="https://wa.me/6285929951565" class="btn-order">Pesan Paket</a>
+    </div>
+
+    <div class="paket-card">
+      <h3>Paket C</h3>
+      <div class="paket-harga">Rp 2.000 / pcs</div>
+      <ul>
+        <li>Kertas Linen / Jasmine</li>
+        <li>Cetak full color 2 sisi</li>
+        <li>Ukuran custom</li>
+        <li>Desain premium eksklusif</li>
+        <li>Amplop + label nama</li>
+        <li><strong>Minimal order 1.000 pcs</strong></li>
+      </ul>
+      <a href="https://wa.me/6285929951565" class="btn-order">Pesan Paket</a>
+    </div>
+
+  </div>
+
+  <div class="back-wrapper">
+    <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+  </div>
+</section>
+
+</body>
+</html>

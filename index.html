@@ -3,232 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Foto - Dhsyt Studio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-
+<title>Dhsyt Studio - Premium Invitation & Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --primary:#6589ff;
-  --bg:#f5f5f7;
-  --card:#ffffff;
-  --text:#2c2c2c;
+  --secondary:#F5F5F5;
+  --card:#FFFFFF;
+  --text:#2C2C2C;
+  --muted:#888;
+  --hover-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-
-body{
-  margin:0;
-  font-family:'Montserrat',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-/* HEADER */
-header{
-  padding:100px 20px 70px;
-  text-align:center;
-  background:linear-gradient(135deg,#4B6CB7,#000);
-  color:#fff;
-}
-
-header h1{
-  font-family:'Playfair Display',serif;
-  font-size:44px;
-  margin-bottom:12px;
-  text-shadow:0 3px 12px rgba(0,0,0,.4);
-}
-
-header p{
-  max-width:640px;
-  margin:auto;
-  font-size:15px;
-  line-height:1.8;
-  color:rgba(255,255,255,.9);
-}
-
-/* SECTION */
-.section{
-  padding:50px 20px;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:25px;
-}
-
-.section-title h2{
-  font-family:'Playfair Display',serif;
-  font-size:34px;
-}
-
-.section-title p{
-  color:#777;
-}
-
-/* GRID */
-.paket-grid{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
-}
-
-/* CARD */.paket-card {
-  background: #fff;
-  border-radius: 24px;
-  padding: 40px 30px;
+body{margin:0;font-family:'Montserrat', sans-serif;background:var(--secondary);color:var(--text);}
+header {
   text-align: center;
-  border: 1px solid rgba(0,0,0,0.08); /* NETRAL */
-  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  padding: 100px 20px 60px;
+  background: linear-gradient(135deg, #4B6CB7, #000000
+  );
+  color: #ff2400;
 }
 
-.paket-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 25px 50px rgba(0,0,0,.1);
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3); /* efek subtle mewah */
 }
 
-.paket-card h3{
-  font-family:'Playfair Display',serif;
-  font-size:26px;
-  color:var(--primary);
+header p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 10px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+}
+.brand{text-align:center;margin:60px 0;}
+.brand img{width:100px;height:auto;margin-bottom:10px;}
+.brand h3{font-family:'Playfair Display', serif;font-size:26px;color:var(--primary);margin:0;}
+.brand p{font-size:14px;color:var(--muted);margin-top:4px;}
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h2{font-family:'Playfair Display', serif;font-size:36px;margin-bottom:12px;}
+.section-title p{font-size:16px;color:var(--muted);}
+/* Kotak tunggal layanan */
+.service-single-card {
+  max-width: 700px;
+  margin: auto;
+  background: var(--card);
+  padding: 40px 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: var(--hover-shadow);
+  border: 1px solid rgba(75,108,183,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.paket-harga{
-  font-size:20px;
-  font-weight:600;
-  margin:10px 0 20px;
+.service-single-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-.paket-card ul{
-  list-style:none;
-  padding:0;
-  margin-bottom:25px;
+.service-single-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--primary);
 }
 
-.paket-card li{
-  font-size:14px;
-  color:#555;
-  margin-bottom:8px;
+.service-single-card p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 30px;
 }
 
-/* BUTTON */
-.btn-order{
-  display:inline-block;
-  padding:12px 34px;
-  border-radius:30px;
-  background:var(--primary);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
-/* BEST */
-.paket-card.best{
-  border:2px solid var(--primary);
-  transform:scale(1.03);
-}
-/* BACK */
-.back-wrapper{
-  display:flex;
-  justify-content:center;
-  margin:40px 0 10px;
-}
-
-.back-btn{
-  padding:10px 22px;
-  border-radius:30px;
-  border:1.5px solid var(--primary);
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600;
-  transition:.3s;
+.service-buttons .btn {
+  flex: 1 1 150px; /* fleksibel tapi minimal 150px */
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--primary);
+  color: #fff;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-.back-btn:hover{
-  background:var(--primary);
-  color:#fff;
+.service-buttons .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom horizontal */
+  gap: 20px; 
+  margin-bottom: 60px;
 }
 
-/* RESPONSIVE */
-@media(max-width:600px){
-  header h1{font-size:32px;}
-}
-.badge{
-  display:none !important;
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(75,108,183,0.3); /* garis batas card */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.paket-card{
-  border-color: rgba(0,0,0,0.08) !important;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
+
+.thumb {
+  width: 100%;
+  height: 200px; /* lebih pendek agar card compact */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(75,108,183,0.2); /* batas foto */
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* full tapi proporsional */
+}
+
+.info {
+  padding: 8px 10px; /* lebih compact */
+  text-align: center;
+}
+
+.price {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: var(--primary);
+  margin: 4px 0 2px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #2c2c2c;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 30px; /* tombol lebih kecil */
+  border-radius: 25px;
+  font-size: 12px;
+  margin: 2px 2px 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.preview {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.preview:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.order {
+  background: var(--primary);
+  color: #fff;
+}
+
+.order:hover {
+  opacity: 0.9;
+}
+.cta{background:linear-gradient(135deg,#4B6CB7,#3C3F9E);border-radius:24px;padding:80px 30px;text-align:center;color:#fff;margin-bottom:60px;}
+.cta h2{font-family:'Playfair Display', serif;font-size:32px;margin-bottom:12px;}
+.cta p{font-size:16px;}
+.cta a{display:inline-block;margin-top:20px;padding:16px 40px;background:#FFD700;color:#2C2C2C;border-radius:40px;font-weight:600;text-decoration:none;transition:.3s;}
+.cta a:hover{opacity:.9;}
+footer{text-align:center;padding:40px 20px;font-size:14px;color:var(--muted);}
+@media(max-width:768px){header h1{font-size:36px;}.section-title h2{font-size:28px;}.services{gap:16px;}.btn{margin:0 20px 12px;}}
 </style>
 </head>
-
 <body>
-
 <header>
-  <h1>Studio Foto</h1>
-  <p>Layanan studio foto profesional dengan konsep simpel, keluarga, hingga prewedding premium</p>
+  <h1>Creative Invitation & Photo Studio</h1>
+  <p>Menghadirkan layanan undangan digital & cetak, fotografi profesional, dan studio foto untuk momen spesial Anda. Setiap detail didesain dengan elegan, memberikan kesan mewah dan tak terlupakan bagi setiap acara.</p>
 </header>
 
-<section class="section">
-  <div class="section-title">
-    <h2>Paket Studio Foto</h2>
-    <p>Pilih paket sesuai kebutuhan Anda</p>
-  </div>
 
-  <div class="paket-grid">
-
-    <!-- Paket A -->
-    <div class="paket-card">
-      <h3>Paket A</h3>
-      <div class="paket-harga">Rp 150.000</div>
-      <ul>
-        <li>Durasi 30 menit</li>
-        <li>Background studio</li>
-        <li>5 foto edited HD</li>
-        <li>1–2 orang</li>
-      </ul>
-      <a href="https://wa.me/6285929951565?text=Halo%20saya%20ingin%20paket%20Studio%20Foto%20A"
-         class="btn-order">Pesan Paket</a>
-    </div>
-
-    <!-- Paket B -->
-    <div class="paket-card best">
-      <h3>Paket B</h3>
-      <div class="paket-harga">Rp 300.000</div>
-      <ul>
-        <li>Durasi 60 menit</li>
-        <li>Background studio</li>
-        <li>15 foto edited HD</li>
-        <li>Hingga 5 orang</li>
-      </ul>
-      <a href="https://wa.me/6285929951565?text=Halo%20saya%20ingin%20paket%20Studio%20Foto%20B"
-         class="btn-order">Pesan Paket</a>
-    </div>
-
-    <!-- Paket C -->
-    <div class="paket-card">
-      <h3>Paket C</h3>
-      <div class="paket-harga">Rp 500.000</div>
-      <ul>
-        <li>Durasi 90 menit</li>
-        <li>2 konsep studio</li>
-        <li>25 foto edited HD</li>
-        <li>Free arahan gaya</li>
-      </ul>
-      <a href="https://wa.me/6285929951565?text=Halo%20saya%20ingin%20paket%20Studio%20Foto%20C"
-         class="btn-order">Pesan Paket</a>
-    </div>
-
-  </div>
-
-  <div class="back-wrapper">
-    <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+<!-- LOGO -->
+<section>
+  <div class="brand">
+    <img src="logo.png" alt="Dhsyt Studio">
+    <h3>Dhsyt Studio</h3>
+    <p>Invitation • Photography • Creative Studio</p>
   </div>
 </section>
+
+<!-- Layanan Kami - Kotak Tunggal -->
+<section>
+  <div class="section-title">
+    <h2>Layanan Kami</h2>
+    <p>Solusi lengkap & eksklusif untuk acara istimewa Anda</p>
+  </div>
+
+  <div class="service-single-card">
+    <h3>Pilih Layanan</h3>
+    <p>Semua layanan kami tersedia di sini. Klik tombol untuk menuju halaman detail.</p>
+    
+<div class="service-buttons">
+  <a href="#undangan-digital" class="btn order">Undangan Digital</a>
+<a href="undangan-fisik" class="btn order">
+  Undangan Fisik
+</a>
+  <a href="fotografer" class="btn order">Fotografer</a>
+  <a href="studio-foto" class="btn order">Studio Foto</a>
+</div>
+  </div>
+</section>
+
+<!-- GRID FOTO PRODUK -->
+<section id="undangan-digital">
+  <div class="section-title">
+    <h2> Paket Undangan Digital </h2>
+    <p>Modern,interaktif & dapat diakses disemua perangkat</p>
+  </div>
+  <div class="grid">
+  <div class="card">
+    <div class="thumb"><img src="foto1.jpg" alt="Produk 1"></div>
+    <div class="info">
+      <div class="price">Rp 34.000</div>
+      <div class="title">Deep-Burgundy</div>
+<a href="https://screamous6661-blip.github.io/Deep-Burgundy-/" class="btn preview" target="_blank">Preview</a>
+      <a href="#" class="btn order">Pesan</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb"><img src="foto2.jpg" alt="Produk 2"></div>
+    <div class="info">
+      <div class="price">Rp 34.000</div>
+      <div class="title">Blue-Dusty</div>
+<a href="https://screamous6661-blip.github.io/Dhsyt-dusty/" class="btn preview" target="_blank">Preview</a>
+      <a href="#" class="btn order">Pesan</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb"><img src="foto3.jpg" alt="Produk 3"></div>
+    <div class="info">
+      <div class="price">Rp 34.000</div>
+      <div class="title">Gold-Metalic</div>
+<a href="https://screamous6661-blip.github.io/Dhsyt/" class="btn preview" target="_blank">Preview</a>
+      <a href="#" class="btn order">Pesan</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb"><img src="foto4.jpg" alt="Produk 4"></div>
+    <div class="info">
+      <div class="price">Rp 34.000</div>
+      <div class="title">Sage-Natural</div>
+<a href="https://screamous6661-blip.github.io/Dhsyteamplet/" class="btn preview" target="_blank">Preview</a>
+      <a href="#" class="btn order">Pesan</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Siap Wujudkan Acara Impian Anda?</h2>
+  <p>Konsultasi gratis & respon cepat via WhatsApp</p>
+  <a href="https://wa.me/6285929951565">Hubungi Kami</a>
+</section>
+
+<footer>
+  © 2026 Dhsyt Studio - Premium Invitation & Photography
+</footer>
 
 </body>
 </html>

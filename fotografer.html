@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layanan Fotografer - Dhsyt Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#6589ff;
+  --bg:#f5f5f7;
+  --card:#ffffff;
+}
+
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:var(--bg);
+  color:#2c2c2c;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:100px 20px 70px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(75,108,183,0.9),
+      rgba(0,0,0,0.85)
+    ),
+    url('header-foto.jpg');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:44px;
+  margin-bottom:12px;
+  text-shadow:0 3px 12px rgba(0,0,0,.4);
+}
+
+header p{
+  max-width:640px;
+  margin:auto;
+  font-size:15px;
+  line-height:1.8;
+  color:rgba(255,255,255,.9);
+}
+
+/* SECTION */
+.section{
+  padding:50px 20px;
+}
+.section.alt{
+  background:#f9f9fb;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:22px;
+}
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  margin-bottom:6px;
+}
+.section-title p{
+  color:#777;
+  font-size:14px;
+}
+
+/* GRID */
+.paket-grid{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+/* CARD */
+.paket-card{
+  background:var(--card);
+  border-radius:24px;
+  padding:36px 28px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.06);
+  border:1px solid rgba(0,0,0,.08);
+}
+.paket-card h3{
+  font-family:'Playfair Display',serif;
+  color:var(--primary);
+  font-size:25px;
+  margin-bottom:6px;
+}
+.harga{
+  font-size:20px;
+  font-weight:600;
+  margin:8px 0 18px;
+}
+.paket-card ul{
+  list-style:none;
+  padding:0;
+  margin-bottom:22px;
+}
+.paket-card li{
+  margin-bottom:8px;
+  font-size:14px;
+  color:#555;
+}
+
+/* BUTTON */
+.btn-order{
+  display:inline-block;
+  padding:12px 34px;
+  border-radius:30px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* HIGHLIGHT */
+.best{
+  border:2px solid var(--primary);
+  transform:scale(1.02);
+}
+
+/* BACK BUTTON */
+.back-wrapper{
+  display:flex;
+  justify-content:center;
+  margin:50px 0 70px;
+}
+.back-btn{
+  padding:10px 26px;
+  border-radius:30px;
+  border:1.5px solid var(--primary);
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+}
+.back-btn:hover{
+  background:var(--primary);
+  color:#fff;
+}
+.ig-wrapper{
+  display:flex;
+  justify-content:center;
+  margin:10px 0 40px;
+}
+
+.btn-instagram{
+  padding:12px 36px;
+  border-radius:40px;
+  border:2px solid #E1306C;
+  color:#E1306C;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+  transition:.3s;
+}
+
+.btn-instagram:hover{
+  background:#E1306C;
+  color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Layanan Fotografer</h1>
+  <p>Dokumentasi profesional untuk momen spesial Anda dengan hasil elegan & berkelas</p>
+</header>
+<div class="ig-wrapper">
+  <a href="https://instagram.com/USERNAME_IG_KAMU"
+     class="btn-instagram"
+     target="_blank">
+     📸 Lihat Portofolio Instagram
+  </a>
+</div>
+<!-- PREWEDDING -->
+<section class="section">
+  <div class="section-title">
+    <h2>Paket Prewedding</h2>
+    <p>Konsep fleksibel indoor & outdoor</p>
+  </div>
+
+  <div class="paket-grid">
+    <div class="paket-card">
+      <h3>Prewedding Indoor</h3>
+      <div class="harga">Rp 1.500.000</div>
+      <ul>
+        <li>Studio / indoor location</li>
+        <li>Durasi 2 jam</li>
+        <li>1 fotografer</li>
+        <li>20 foto edited HD</li>
+        <li>Free arahan gaya</li>
+      </ul>
+      <a href="https://wa.me/6285929951565" class="btn-order">Pesan Paket</a>
+    </div>
+
+    <div class="paket-card best">
+      <h3>Prewedding Outdoor</h3>
+      <div class="harga">Rp 2.500.000</div>
+      <ul>
+        <li>Lokasi outdoor</li>
+        <li>Durasi 4 jam</li>
+        <li>1 fotografer</li>
+        <li>40 foto edited HD</li>
+        <li>Free moodboard</li>
+      </ul>
+      <a href="https://wa.me/6285929951565" class="btn-order">Pesan Paket</a>
+    </div>
+  </div>
+</section>
+
+<!-- WEDDING -->
+<section class="section alt">
+  <div class="section-title">
+    <h2>Paket Wedding</h2>
+    <p>Dokumentasi hari istimewa Anda</p>
+  </div>
+
+  <div class="paket-grid">
+    <div class="paket-card best">
+      <h3>Wedding Documentation</h3>
+      <div class="harga">Rp 4.000.000</div>
+      <ul>
+        <li>Akad & resepsi</li>
+        <li>Durasi hingga 8 jam</li>
+        <li>2 fotografer</li>
+        <li>200+ foto edited HD</li>
+        <li>Google Drive</li>
+      </ul>
+      <a href="https://wa.me/6285929951565" class="btn-order">Pesan Paket</a>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT -->
+<section class="section">
+  <div class="section-title">
+    <h2>Paket Event</h2>
+    <p>Khitanan, ulang tahun, wisuda & lainnya</p>
+  </div>
+
+  <div class="paket-grid">
+    <div class="paket-card">
+      <h3>Event Documentation</h3>
+      <div class="harga">Rp 1.500.000</div>
+      <ul>
+        <li>Durasi hingga 4 jam</li>
+        <li>1 fotografer</li>
+        <li>100+ foto edited</li>
+        <li>Google Drive</li>
+      </ul>
+      <a href="https://wa.me/6285929951565" class="btn-order">Pesan Paket</a>
+    </div>
+  </div>
+</section>
+
+<div class="back-wrapper">
+  <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+</div>
+
+</body>
+</html>

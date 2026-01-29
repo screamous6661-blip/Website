@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Foto - Dhsyt Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#6589ff;
+  --bg:#f5f5f7;
+  --card:#ffffff;
+  --text:#2c2c2c;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  padding:100px 20px 70px;
+  text-align:center;
+  background:linear-gradient(135deg,#4B6CB7,#000);
+  color:#fff;
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:44px;
+  margin-bottom:12px;
+  text-shadow:0 3px 12px rgba(0,0,0,.4);
+}
+
+header p{
+  max-width:640px;
+  margin:auto;
+  font-size:15px;
+  line-height:1.8;
+  color:rgba(255,255,255,.9);
+}
+
+/* SECTION */
+.section{
+  padding:50px 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+}
+
+.section-title p{
+  color:#777;
+}
+
+/* GRID */
+.paket-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+/* CARD */.paket-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.08); /* NETRAL */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.paket-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(0,0,0,.1);
+}
+
+.paket-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  color:var(--primary);
+}
+
+.paket-harga{
+  font-size:20px;
+  font-weight:600;
+  margin:10px 0 20px;
+}
+
+.paket-card ul{
+  list-style:none;
+  padding:0;
+  margin-bottom:25px;
+}
+
+.paket-card li{
+  font-size:14px;
+  color:#555;
+  margin-bottom:8px;
+}
+
+/* BUTTON */
+.btn-order{
+  display:inline-block;
+  padding:12px 34px;
+  border-radius:30px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* BEST */
+.paket-card.best{
+  border:2px solid var(--primary);
+  transform:scale(1.03);
+}
+/* BACK */
+.back-wrapper{
+  display:flex;
+  justify-content:center;
+  margin:40px 0 10px;
+}
+
+.back-btn{
+  padding:10px 22px;
+  border-radius:30px;
+  border:1.5px solid var(--primary);
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.back-btn:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  header h1{font-size:32px;}
+}
+.badge{
+  display:none !important;
+}
+
+.paket-card{
+  border-color: rgba(0,0,0,0.08) !important;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Studio Foto</h1>
+  <p>Layanan studio foto profesional dengan konsep simpel, keluarga, hingga prewedding premium</p>
+</header>
+
+<section class="section">
+  <div class="section-title">
+    <h2>Paket Studio Foto</h2>
+    <p>Pilih paket sesuai kebutuhan Anda</p>
+  </div>
+
+  <div class="paket-grid">
+
+    <!-- Paket A -->
+    <div class="paket-card">
+      <h3>Paket A</h3>
+      <div class="paket-harga">Rp 150.000</div>
+      <ul>
+        <li>Durasi 30 menit</li>
+        <li>Background studio</li>
+        <li>5 foto edited HD</li>
+        <li>1–2 orang</li>
+      </ul>
+      <a href="https://wa.me/6285929951565?text=Halo%20saya%20ingin%20paket%20Studio%20Foto%20A"
+         class="btn-order">Pesan Paket</a>
+    </div>
+
+    <!-- Paket B -->
+    <div class="paket-card best">
+      <h3>Paket B</h3>
+      <div class="paket-harga">Rp 300.000</div>
+      <ul>
+        <li>Durasi 60 menit</li>
+        <li>Background studio</li>
+        <li>15 foto edited HD</li>
+        <li>Hingga 5 orang</li>
+      </ul>
+      <a href="https://wa.me/6285929951565?text=Halo%20saya%20ingin%20paket%20Studio%20Foto%20B"
+         class="btn-order">Pesan Paket</a>
+    </div>
+
+    <!-- Paket C -->
+    <div class="paket-card">
+      <h3>Paket C</h3>
+      <div class="paket-harga">Rp 500.000</div>
+      <ul>
+        <li>Durasi 90 menit</li>
+        <li>2 konsep studio</li>
+        <li>25 foto edited HD</li>
+        <li>Free arahan gaya</li>
+      </ul>
+      <a href="https://wa.me/6285929951565?text=Halo%20saya%20ingin%20paket%20Studio%20Foto%20C"
+         class="btn-order">Pesan Paket</a>
+    </div>
+
+  </div>
+
+  <div class="back-wrapper">
+    <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+  </div>
+</section>
+
+</body>
+</html>
